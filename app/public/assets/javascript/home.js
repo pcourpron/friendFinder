@@ -26,7 +26,7 @@ $('#signup').click(function (event) {
             if (res === 'success') {
                 localStorage.setItem('auth_key', req);
                 localStorage.setItem('username', loginObject.email);
-                location = 'survey';
+                window.location.href = 'https://friend-finder-23.herokuapp.com/survey';
             };
 
         })
@@ -52,7 +52,7 @@ $('#login').click(function (event) {
             localStorage.setItem('auth_key', req[1]);
             localStorage.setItem('username',req[0]);
             localStorage.setItem('email',loginObject.email);
-            window.location.href = "https://www.example.com";   
+            window.location.href = "https://friend-finder-23.herokuapp.com/survey";   
         };
 
     })
