@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        .modal-title{text-align:center}
+    </style>
+</head>
+
+<body>
+
+    <div class='container'>
+        <div class='jumbotron'>
+            <h1 class="display-4">Friend Finder</h1>
+            <hr class="my-4">
+            <h2>Answer a few questions!</h2>
+            <h2>Find Friends!</h2>
+            <h2>Yay!</h2>
+
+            <a class="btn btn-primary btn-lg" data-toggle='modal' data-target="#loginModal" role="button">Log in</a>
+            <a class="btn btn-primary btn-lg"  data-toggle='modal' data-target="#signupModal"  role="button">Sign up</a>
+            <!-- Modal -->
+            <div class="modal fade" id="signupModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            <h4 class="modal-title">Sign up</h4>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form method="POST" role="form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Email</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="text" class="form-control" id="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Verify Password</label>
+                                    <input type="text" class="form-control" id="verify-password">
+                                </div>
+
+                            </form>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-md" id="signup"><span class="fa fa-paper-plane"></span>
+                                    Sign up</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="modal fade" id="loginModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+    
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+    
+                                <h4 class="modal-title">Login</h4>
+                            </div>
+    
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form method="POST" role="form">
+                                    <div class="form-group">
+                                        <label for="role">Email</label>
+                                        <input type="text" class="form-control" id="emailUp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="text" class="form-control" id="passwordUp">
+                                    </div>    
+                                </form>
+    
+    
+                            </div>
+                            <div class="modal-footer">
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-md" id="login"><span class="fa fa-paper-plane"></span>
+                                        Log in</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+    
+    
+    
+                </div>
+
+
+        </div>
+
+    </div>
+    
+
+    <script src='/public/assets/javascript/home.js'></script>
+
+</body>
+
+</html>
