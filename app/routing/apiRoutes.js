@@ -177,5 +177,31 @@ module.exports = function (app) {
 
     })
 
+    app.post('/api/checkUser',function(req,response){
+        var port = 3306;
+        var connection = mysql.createConnection({
+            host: "jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+
+            // Your port; if not 3306
+            port: port,
+
+            // Your username
+            user: "unvgofwi87t1yfna",
+
+            // Your password
+            password: "i9ew72vpz9oobivr",
+            database: "agl6fqpkbkii3c61"
+
+        });
+
+        connection.connect(function (err) {
+            if (err) throw err;
+        });
+
+        connection.query('SELECT auth_key from user WHERE ? ',{email:req.body},function(err,res){
+            response.send(res)
+        })
+    })
+
 
 }
