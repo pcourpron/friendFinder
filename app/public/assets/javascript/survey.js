@@ -2,7 +2,7 @@ if (localStorage.getItem('email') === null) {
     window.location.href = 'https://friend-finder-23.herokuapp.com/'
 }
 else {
-    $.post('/api/checkUser', location.getItem('email'), function (req, res) {
+    $.post('/api/checkUser', localStorage.getItem('email'), function (req, res) {
         var auth_key = localStorage.getItem('auth_key');
         if (auth_key != req) {
             window.location.href = 'https://friend-finder-23.herokuapp.com/'
