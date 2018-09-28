@@ -4,6 +4,7 @@ if (localStorage.getItem('email') === null) {
 else {
     $.post('/api/checkUser', localStorage.getItem('email'), function (req, res) {
         var auth_key = localStorage.getItem('auth_key');
+        console.log(req)
         if (auth_key != req) {
             window.location.href = 'https://friend-finder-23.herokuapp.com/'
         }
